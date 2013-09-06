@@ -1,0 +1,102 @@
+/* 
+    Document   : style.css
+    Created on : 26-ago-2012, 16:03:31
+    Author     : Nicolas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body{
+    background-image: url("296.jpg");
+}
+.logo{
+    width:100px;
+    margin:0px;
+    float:left;
+}
+
+.logo img{
+    width:100px;
+}
+
+.header{
+   height:150px;
+}
+
+.login{
+    float:right;
+}
+
+.footer.well{
+    text-align: center;
+    /*width:100%;*/
+    clear:both;
+}
+
+.thumb_offer{
+    width:30px;
+}
+
+.thumb_offer .thumbnail{
+    width: 300px;
+    margin: 0px;
+}
+
+.thumb_offer .description_offer{
+    float:left;
+    width:50%;
+}
+.catalog_item{
+    width:100%;
+}
+
+.catalog_item img{
+    width:150px;
+    margin: 0px;
+}
+.catalog_item .caption{
+   float:right;
+}
+
+.well .thumbnail {
+    float:left;
+}
+.well .span4 .thumbnail .image_container{
+    overflow: hidden;
+    text-align: center;
+    height:200px;
+}
+.well .span4 .thumbnail img{
+    margin:0 auto;
+}
+.product_desc, .product{
+    width:60%;
+    float:left;
+}
+.product_desc h1 {
+    width:45%;
+    margin:0px;
+    float:left;
+}
+img.image_description{
+    width:300px;
+}
+
+.pull-right {
+  float: right;
+  margin-right:100px;
+  margin-bottom:10px;
+}
+
+.carrito{
+    background-color: whitesmoke;
+}
