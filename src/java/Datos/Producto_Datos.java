@@ -144,7 +144,7 @@ public class Producto_Datos {
             //Pasar a la capa de datos
             if(soloOfertas != 0){
                 pstm = con.prepareStatement("SELECT * FROM productos"
-                    + " WHERE productos.en_oferta = 1 "
+                    + " WHERE productos.en_oferta = true "
                         );
             }else{
                 pstm = con.prepareStatement("SELECT * FROM productos");
@@ -156,7 +156,7 @@ public class Producto_Datos {
             while(res.next()){
                 //System.out.println("ENCONTRO EL PRODUCTO");
                 producto = new Producto();
-                producto.setId(res.getInt("productos_id"));
+                producto.setId(res.getInt("producto_id"));
                 producto.setNombre(res.getString("nombre"));
                 producto.setDescripcion(res.getString("descripcion"));
                 producto.setPresentacion(res.getString("presentacion"));

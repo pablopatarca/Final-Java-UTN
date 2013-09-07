@@ -22,7 +22,7 @@
         <div class="well">
             <ul class="thumbnails">
             <%    
-            ArrayList<Producto> listaProductos = (ArrayList<Producto>) ProductoDA.getListaProductos(0);
+            ArrayList<Producto> listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
             Iterator<Producto> itr = listaProductos.iterator();
             while (itr.hasNext()) {
               Producto producto = itr.next();
