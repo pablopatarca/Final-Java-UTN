@@ -27,7 +27,7 @@ public abstract class Cliente_Datos
 			{
                             
 				cli = new Cliente();
-                                cli.setId(Integer.parseInt(res.getString("id").toString()));
+                                cli.setId(Integer.parseInt(res.getString("cliente_id").toString()));
 				cli.setNombre(res.getString("nombre"));
 				cli.setApellido(res.getString("apellido"));
 				cli.setTelefono(res.getString("telefono"));
@@ -159,7 +159,7 @@ public abstract class Cliente_Datos
 			while(res.next())
 			{
 				cli = new Cliente();
-                                cli.setId(res.getInt("id"));
+                                cli.setId(res.getInt("cliente_id"));
 				cli.setNombre(res.getString("nombre"));
 				cli.setApellido(res.getString("apellido"));
 				cli.setTelefono(res.getString("telefono"));
@@ -189,8 +189,8 @@ public abstract class Cliente_Datos
 		{
                     
 			Connection con = Extras.Connection_class.mysql_connect();
-                        PreparedStatement pstm= con.prepareStatement("DELETE FROM clientes WHERE id='"+cliente_id+"'");
-                        System.out.println("DELETE FROM clientes WHERE id='"+cliente_id+"'");
+                        PreparedStatement pstm= con.prepareStatement("DELETE FROM clientes WHERE cliente_id='"+cliente_id+"'");
+                        System.out.println("DELETE FROM clientes WHERE cliente_id='"+cliente_id+"'");
                         pstm.executeUpdate();
                         
 			pstm.close();

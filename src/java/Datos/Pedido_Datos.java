@@ -42,7 +42,7 @@ public class Pedido_Datos {
                         PreparedStatement pstm = con.prepareStatement(query);
 
                         Statement statement = con.createStatement();
-                        String [] columnas = { "id" };
+                        String [] columnas = { "pedido_id" };
                         statement.executeUpdate(query, columnas);
                         ResultSet rs = statement.getGeneratedKeys();
                         if(rs.next()){
@@ -56,7 +56,7 @@ public class Pedido_Datos {
                         ArrayList<Producto> listaProductos = pedido.getListaProductos();
                         
                         for (Producto producto : listaProductos){
-                            query = "INSERT INTO lineas_de_pedidos(pedido_id, producto_id, cantidad)"
+                            query = "INSERT INTO detalle_pedido(pedido_id, producto_id, cantidad)"
                                     + "VALUES ("
                                     + "'" + pedido.getId() +"',"
                                     + "'" + producto.getId() +"',"
@@ -104,7 +104,7 @@ public class Pedido_Datos {
 
             pedido = new Pedido();
             pedido.setClienteId(cliente_id);
-            pedido.setId(res.getInt("pedidos.id"));
+            pedido.setId(res.getInt("pedidos.pedido_id"));
             pedido.setTotal(res.getDouble("pedidos.total"));
             pedido.setFecha(res.getString("pedidos.fecha"));
             listaPedidos.add(pedido);

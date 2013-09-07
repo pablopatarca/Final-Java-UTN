@@ -52,7 +52,7 @@ public class Producto_Datos {
 		try
 		{
                                     
-			PreparedStatement pstm = (PreparedStatement) con.prepareStatement("UPDATE productos SET nombre = ?,descripcion =  ?,presentacion = ?,en_oferta = ?,precio = ? WHERE id = ?;");
+			PreparedStatement pstm = (PreparedStatement) con.prepareStatement("UPDATE productos SET nombre = ?,descripcion =  ?,presentacion = ?,en_oferta = ?,precio = ? WHERE productos_id = ?;");
 			pstm.setString(1, p.getNombre());
 			pstm.setString(2, p.getDescripcion());
 			pstm.setString(3, p.getPresentacion());
@@ -75,7 +75,7 @@ public class Producto_Datos {
 		Connection con = (Connection) Extras.Connection_class.mysql_connect();
 		try
 		{
-			PreparedStatement pstm = (PreparedStatement) con.prepareStatement("Delete productos where productos.id = ?");
+			PreparedStatement pstm = (PreparedStatement) con.prepareStatement("Delete productos where productos.productos_id = ?");
 			pstm.setString(1, id);
        			pstm.executeUpdate();
 			pstm.close();
@@ -97,7 +97,7 @@ public class Producto_Datos {
             Class.forName("com.mysql.jdbc.Driver");
             java.sql.Connection con = Extras.Connection_class.mysql_connect();
 
-            String query = "SELECT * FROM productos WHERE id='"+id+"';";
+            String query = "SELECT * FROM productos WHERE productos_id='"+id+"';";
 
 
             System.out.println(query);
@@ -109,7 +109,7 @@ public class Producto_Datos {
             if(res.next()){
                 //System.out.println("ENCONTRO EL PRODUCTO");
                 producto = new Producto();
-                producto.setId(res.getInt("id"));
+                producto.setId(res.getInt("productos_id"));
                 producto.setNombre(res.getString("nombre"));
                 producto.setDescripcion(res.getString("descripcion"));
                 producto.setPresentacion(res.getString("presentacion"));
@@ -156,7 +156,7 @@ public class Producto_Datos {
             while(res.next()){
                 //System.out.println("ENCONTRO EL PRODUCTO");
                 producto = new Producto();
-                producto.setId(res.getInt("id"));
+                producto.setId(res.getInt("productos_id"));
                 producto.setNombre(res.getString("nombre"));
                 producto.setDescripcion(res.getString("descripcion"));
                 producto.setPresentacion(res.getString("presentacion"));
