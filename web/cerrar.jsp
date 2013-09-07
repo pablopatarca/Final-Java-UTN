@@ -1,7 +1,7 @@
 <%-- 
     Document   : cerrar
-    Created on : 07/09/2012, 19:45:55
-    Author     : bengui
+    Created on : 07/09/2013, 19:45:55
+    Author     : Pablo
 
     Cierra la session y retorna al index
 --%>

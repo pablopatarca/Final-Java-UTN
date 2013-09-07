@@ -3,7 +3,7 @@
     Created on : 15-ago-2012, 20:32:55
     Author     : Nicolas
 --%>
-<%@page import="Datos.ProductoDA"%>
+<%@page import="Datos.Producto_Datos"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Producto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -19,7 +19,7 @@
     
         <%    
         HttpSession sesion = request.getSession(false);
-        Producto producto = ProductoDA.getProducto(request.getParameter("producto"));
+        Producto producto = Producto_Datos.getProducto(request.getParameter("producto"));
             
         %>
         <%

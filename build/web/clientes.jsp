@@ -1,13 +1,13 @@
 <%-- 
     Document   : clientes
-    Created on : 05/11/2012, 18:54:20
-    Author     : Benjamin
+    Created on : 05/11/2013, 18:54:20
+    Author     : Pablo
 --%>
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Cliente"%>
 <%@page import="Classes.Cliente"%>
-<%@page import="Datos.ClienteDA"%>
+<%@page import="Datos.Cliente_Datos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

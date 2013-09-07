@@ -4,9 +4,9 @@
     Author     : Nicolas
 --%>
 <%@page import="Classes.Producto"%>
-<%@page import="Datos.ProductoDA"%>
+<%@page import="Datos.Producto_Datos"%>
 
 <% 
-ProductoDA.eliminarProducto(request.getParameter("id"));
+Producto_Datos.eliminarProducto(request.getParameter("id"));
 response.sendRedirect("product.jsp?producto="+request.getParameter("id").toString());
 %>

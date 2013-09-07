@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 15-ago-2012, 20:32:55
-    Author     : Nicolas
+    Author     : Pablo
 --%>
 
 <%@page import="java.util.Iterator"%>

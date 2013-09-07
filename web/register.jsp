@@ -1,7 +1,7 @@
 <%-- 
     Document   : register
     Created on : 16-ago-2012, 20:42:35
-    Author     : Nicolas
+    Author     : Pablo
 --%>
 
 <%@page language="java" session="true" %>

@@ -40,29 +40,29 @@ public class Registro extends HttpServlet {
                 String usuario = request.getParameter ("usuario");
                 String password = request.getParameter ("password");
 
-                        Cliente cliente = new Cliente();
-                        cliente.setNombre(nombre);
-                        cliente.setApellido(apellido);
-                        cliente.setDireccion(direccion);
-                        cliente.setTelefono(telefono);
-                        cliente.setEmail(email);
-                        cliente.setUsuario(usuario);
-                        cliente.setPassword(password);
-                        
-                        try
-                        {       
-                            if(Cliente_Datos.nuevoCliente(cliente)){
-                                mensaje = "Cliente creado con exito!!!";
-                                //response.sendRedirect("register_success.jsp");
-                            }else{
-                                mensaje = "Error al crear nuevo cliente !!!!" ;
-                            }//"Error al crear nuevo cliente !!!!"
-                            
-                        }catch(Exception e)
-                        {
-                                
-                               
-                        }	
+                Cliente cliente = new Cliente();
+                cliente.setNombre(nombre);
+                cliente.setApellido(apellido);
+                cliente.setDireccion(direccion);
+                cliente.setTelefono(telefono);
+                cliente.setEmail(email);
+                cliente.setUsuario(usuario);
+                cliente.setPassword(password);
+
+                try
+                {       
+                    if(Cliente_Datos.nuevoCliente(cliente)){
+                        mensaje = "Cliente creado con exito!!!";
+                        //response.sendRedirect("register_success.jsp");
+                    }else{
+                        mensaje = "Error al crear nuevo cliente !!!!" ;
+                    }//"Error al crear nuevo cliente !!!!"
+
+                }catch(Exception e)
+                {
+
+
+                }	
 		request.setAttribute("mensaje", mensaje);
 		request.setAttribute("resultado", resultado);
 		vista.forward(request, response);

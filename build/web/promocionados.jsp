@@ -5,7 +5,7 @@
 --%>
 
 <%@page import="java.sql.ResultSet"%>
-<%@page import="Datos.ProductoDA"%>
+<%@page import="Datos.Producto_Datos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,12 +18,12 @@
          <jsp:include page="includes/menu.jsp" flush="false" />
       <div class="well">
        <ul class="thumbnails">
-          <%    
-        ResultSet rs = (ResultSet) ProductoDA.GetPromocionados();
+<%
+        ResultSet rs = (ResultSet) Producto_Datos.getListaProductos(1); //.GetPromocionados();
         rs.beforeFirst();
         while (rs.next())
-        {    %>          
-           
+        {    
+%>
                 <li class="span4">
                 <div class="thumbnail">
                   <div class="image_container">

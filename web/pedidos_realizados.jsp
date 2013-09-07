@@ -5,8 +5,8 @@
 --%>
 
 <%@page import="Classes.Pedido"%>
-<%@page import="Datos.PedidoDA"%>
-<%@page import="Datos.ClienteDA"%>
+<%@page import="Datos.Pedido_Datos"%>
+<%@page import="Datos.Cliente_Datos"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Cliente"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -23,14 +23,14 @@
             <div class="container">
             <h2>Lista de Pedidos</h2>
             <%
-            ArrayList<Cliente> listaClientes =  ClienteDA.getClientes();
+            ArrayList<Cliente> listaClientes =  Cliente_Datos.getClientes();
 
                     for (Cliente cliente : listaClientes){
 
                         out.println("<h3>" + cliente.getNombre() + " " + cliente.getApellido() + "</h3>");
                         out.println("<h4>" + cliente.getId() + "</h4>");
 
-                        ArrayList<Pedido> listaPedidos = PedidoDA.getPedidos(cliente.getId());
+                        ArrayList<Pedido> listaPedidos = Pedido_Datos.getPedidos(cliente.getId());
                         out.println("<table class='table'>");
                         for(Pedido pedido : listaPedidos){
 

@@ -6,7 +6,7 @@
 
 <%@page import="Classes.Producto"%>
 <%@page import="java.sql.ResultSet"%>
-<%@page import="Datos.ProductoDA"%>
+<%@page import="Datos.Producto_Datos"%>
 <%//@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page contentType="text/html;charset=UTF-8"%>
 <!DOCTYPE html>
@@ -22,7 +22,7 @@
             <%    
             HttpSession sesion = request.getSession(false);
             
-            Producto rs = ProductoDA.getProducto(request.getParameter("producto"));
+            Producto rs = Producto_Datos.getProducto(request.getParameter("producto"));
             %>   
             <a class="thumbnail pull-right span3">
                 <img class="image_description" src="images/<%out.println(rs.getImagen());%>" alt="">

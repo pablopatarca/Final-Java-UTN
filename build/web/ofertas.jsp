@@ -4,7 +4,7 @@
     Author     : Nicolas
 --%>
 <%@page import="java.util.Iterator"%>
-<%@page import="Datos.ProductoDA"%>
+<%@page import="Datos.Producto_Datos"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Producto"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -21,7 +21,7 @@
         <div class="well">
             <ul class="thumbnails">
             <%    
-            ArrayList<Producto> listaProductos = (ArrayList<Producto>) ProductoDA.getListaProductos(0);
+            ArrayList<Producto> listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
             Iterator<Producto> itr = listaProductos.iterator();
             while (itr.hasNext()) {
               Producto producto = itr.next();

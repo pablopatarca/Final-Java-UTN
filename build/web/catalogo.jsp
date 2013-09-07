@@ -1,14 +1,14 @@
 <%-- 
     Document   : index
-    Created on : 15-ago-2012, 20:32:55
-    Author     : Nicolas
+    Created on : 15-ago-2013, 20:32:55
+    Author     : Pablo
 --%>
 
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="Classes.Producto"%>
 <%@page import="java.sql.ResultSet"%>
-<%@page import="Datos.ProductoDA"%>
+<%@page import="Datos.Producto_Datos"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
