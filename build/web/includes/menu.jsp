@@ -1,45 +1,38 @@
 <%@page import="Classes.Cliente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="true"%>
-       
-<div class="header well">
-    <div class="logo">
-        <a href="index.jsp"><img src="includes/ciguena-bebe.jpg"></a>
-    </div>
-    <div class="offset1 span5">
-        <h1>Verte Crecer</h1>
-    </div>
-        <div class="span6 pull-right">
-            <%
+
+<div class="">
+    <div class="well" style="padding: 5px;">
+        <div style="float: right">
+        <%
             HttpSession sesion = request.getSession(false);
             if(sesion.getAttribute("cliente")!=null){
-                    out.println("Bienvenido "+sesion.getAttribute("usuario"));
+                    out.println(sesion.getAttribute("usuario"));
+                    
             %>
-            <br />
-            <a href="cerrar.jsp">Cerrar la sesi&oacute;n</a></h3>
+            <a href="cerrar.jsp">Cerrar sesi&oacute;n</a></h3>
             <%
             }
             else{
             %>
-
-            <form action="login.jsp" method="post" name="formLogin" class="form-horizontal">
-                <div class="control-group">
-                    <label class="control-label">Usuario:</label>
-                    <input type="text"  name="usuario" size="15" tabindex="1" maxlength="20" class="control"/>
-                </div>
-                <div class="control-group">
-                    <label class="control-label">Password:</label>
-                    <input type="password" name="password" size="15" tabindex="2" maxlength="20" class="control"/>
-                </div>
-                <div class="control-group pull-right">
-                    <input type="submit" name="Submit" value="Ingresar" tabindex="3" style="text-align:center" class="btn control"/>
-                </div>
-            </form>
+        <form action="login.jsp" class=" form-inline" style="margin: 0 0 0 0">
+          <input type="text" class="input-small" name="usuario" size="15" tabindex="1" maxlength="20" placeholder="Usuario" class="control">
+          <input type="password" class="input-small" name="password" size="15" tabindex="2" maxlength="20" placeholder="Contraseña" class="control"/>
+          <label class="checkbox">
+            <input type="checkbox"> Recordar
+          </label>
+          <button type="submit" name="submit" class="btn">Entrar</button>
+        </form>
+    
             <%
             }     
             %>
-
+        </div>
+        <div style="clear: both"></div>
     </div>
 </div>
+
+
 <div class="navbar">
   <div class="navbar-inner">
     <a href="index.jsp"><div class="logo"></div></a>

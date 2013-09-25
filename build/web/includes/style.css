@@ -16,7 +16,8 @@ root {
 }
 
 body{
-    background-image: url("296.jpg");
+    /*background-image: url("296.jpg");*/
+    background-color: graytext;
 }
 .logo{
     width:100px;

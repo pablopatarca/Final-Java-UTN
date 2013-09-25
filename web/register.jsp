@@ -79,38 +79,56 @@
             <input type="hidden" name="enviado" value="1" />
             <div class="control-group">
                 <label class="control-label">Nombre</label>
-                <input name="nombre" id="nombre" type="text" class="control" />
+                <div class="controls">
+                    <input name="nombre" id="nombre" type="text" class="control" />
+                </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Apellido</label>
-                <input name="apellido" id="apellido" type="text" class="control" />
+                <div class="controls">
+                    <input name="apellido" id="apellido" type="text" class="control" />
+                </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Telefono</label>
-                <input name="telefono" id="telefono" type="text" class="control" />
+                <div class="controls">
+                    <input name="telefono" id="telefono" type="text" class="control" />
+                </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Email</label>
-                <input name="email" id="email" type="text" class="control" />
+                <div class="controls">
+                    <input name="email" id="email" type="text" class="control" />
+                </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Direccion</label>
-                <input name="direccion" id="direccion" type="text" class="control" />
+                <div class="controls">
+                    <input name="direccion" id="direccion" type="text" class="control" />
+                </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Nombre de usuario</label>
-                <input name="usuario" id="usuario" type="text" class="control" />
+                <div class="controls">
+                    <input name="usuario" id="usuario" type="text" class="control" />
+                </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Password</label>
-                <input name="password" id="password" type="password" class="control" />
+                <div class="controls">
+                    <input name="password" id="password" type="password" class="control" />
+                </div>
             </div>
             <div class="control-group">
                 <label class="control-label">Repeat Password</label>
-                <input name="repeat_password" id="repeat_password" type="password" class="control" />
+                <div class="controls">
+                    <input name="repeat_password" id="repeat_password" type="password" class="control" />
+                </div>
             </div>
             <div class="control-group">
-                <input type="submit" value="Registrarse" id="submit-button" class="btn control" />
+                <div class="controls">
+                    <input type="submit" value="Registrarse" id="submit-button" class="btn control" />
+                </div>
             </div>
         </form>
     </div>

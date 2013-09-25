@@ -19,7 +19,7 @@
                   phone                 : $('#telefono').val(),
                   email                 : $('#mail').val(),
                   subject               : $('#asunto').val(),
-                  message              : $('#mensaje').val()
+                  message               : $('#mensaje').val()
               };
               
               if(validation(user_info)){
@@ -88,10 +88,12 @@
 
                 <div class="control-group">
                     <label class="control-label">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje" cols="60" rows="5">&nbsp;</textarea>
-                </div>
-                <div class="control-group">
-                    <input name="Enviar" value="Enviar" id="submit-button" type="submit" />
+                    <div class="controls">
+                        <textarea name="mensaje" id="mensaje" cols="60" rows="5">&nbsp;</textarea>
+                    </div>
+                    <div class="controls">
+                        <input name="Enviar" value="Enviar" id="submit-button" type="submit" />
+                    </div>
                 </div>
         </form>
 
@@ -129,7 +131,9 @@
 
                 <div class="control-group">
                     <label class="control-label">Mensaje</label>
-                    <textarea name="mensaje" id="mensaje" ols="60" rows="5">&nbsp;</textarea>
+                    <div class="controls">
+                        <textarea name="mensaje" id="mensaje" ols="60" rows="5">&nbsp;</textarea>
+                    </div>
                 </div>
                 <div class="control-group">
                     <input name="Enviar" value="Enviar" id="submit-button" type="submit" />

@@ -30,46 +30,42 @@ public class Pedido_Datos {
                 //String Fecha = "date(" + f +")";
                 int cliente_id = pedido.getClienteId();
 		try
-		{
-                    
-                    
-                        
-			//PreparedStatement pstm = (PreparedStatement) con.prepareStatement("INSERT INTO pedidos(cliente_id) VALUES(?);");
-			String query = "INSERT INTO pedidos(cliente_id, fecha, total) VALUES('"+
-                                pedido.getClienteId() +"', '"+
-                                pedido.getFechaSQL()+"', '"+
-                                pedido.getTotal()+"' );";
-                        PreparedStatement pstm = con.prepareStatement(query);
+		{ 
+    
+                    //PreparedStatement pstm = (PreparedStatement) con.prepareStatement("INSERT INTO pedidos(cliente_id) VALUES(?);");
+                    String query = "INSERT INTO pedidos(cliente_id, fecha, total) VALUES('"+
+                            pedido.getClienteId() +"', '"+
+                            pedido.getFechaSQL()+"', '"+
+                            pedido.getTotal()+"' );";
+                    PreparedStatement pstm = con.prepareStatement(query);
 
-                        Statement statement = con.createStatement();
-                        String [] columnas = { "pedido_id" };
-                        statement.executeUpdate(query, columnas);
-                        ResultSet rs = statement.getGeneratedKeys();
-                        if(rs.next()){
-                            
-                            //System.out.println("NUMERO DE PEDIDO: "+rs.getInt(1));
-                            pedido.setId(rs.getInt(1));
-                        }
-                        
-                        
-                        
-                        ArrayList<Producto> listaProductos = pedido.getListaProductos();
-                        
-                        for (Producto producto : listaProductos){
-                            query = "INSERT INTO detalle_pedido(pedido_id, producto_id, cantidad)"
-                                    + "VALUES ("
-                                    + "'" + pedido.getId() +"',"
-                                    + "'" + producto.getId() +"',"
-                                    + "'" + producto.getCanidad() +"'"
-                                    + ")";
-                            
-                            statement.executeUpdate(query);
-                            
-                        }
-                        
-                        
-                        con.close();
-                        
+                    Statement statement = con.createStatement();
+                    String [] columnas = { "pedido_id" };
+                    statement.executeUpdate(query, columnas);
+                    ResultSet rs = statement.getGeneratedKeys();
+                    if(rs.next()){
+
+                        //System.out.println("NUMERO DE PEDIDO: "+rs.getInt(1));
+                        pedido.setId(rs.getInt(1));
+                    }
+
+
+
+                    ArrayList<Producto> listaProductos = pedido.getListaProductos();
+
+                    for (Producto producto : listaProductos){
+                        query = "INSERT INTO detalle_pedido(pedido_id, producto_id, cantidad)"
+                                + "VALUES ("
+                                + "'" + pedido.getId() +"',"
+                                + "'" + producto.getId() +"',"
+                                + "'" + producto.getCanidad() +"'"
+                                + ")";
+
+                        statement.executeUpdate(query);
+
+                    }
+
+                    con.close();
                         
 		}
 		catch(SQLException e)

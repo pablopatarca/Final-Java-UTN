@@ -6,6 +6,7 @@ public class Connection_class{
   public static Connection mysql_connect() {
       Connection conn = null;
       String url = "jdbc:mysql://localhost:3306/";
+      //String url = "jdbc:mysql://https://mysql-proyectojavautn.jelastic.servint.net";
       String dbName = "jdelivery_db";
       String driver = "com.mysql.jdbc.Driver";
       String userName = "jdelivery"; 

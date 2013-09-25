@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
-    Created on : 15-ago-2012, 20:32:55
-    Author     : Nicolas
+    Created on : 15-ago-2013, 20:32:55
+    Author     : Pablo
 --%>
 <%@page import="Datos.Producto_Datos"%>
 <%@page import="java.util.ArrayList"%>

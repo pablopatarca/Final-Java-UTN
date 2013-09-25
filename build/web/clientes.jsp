@@ -32,7 +32,7 @@
                 </tr>
                 <%
 
-                ArrayList<Cliente> listaClientes =  ClienteDA.getClientes();
+                ArrayList<Cliente> listaClientes =  Cliente_Datos.getClientes();
 
                 for (Cliente cliente : listaClientes){
                     out.println("<tr>");

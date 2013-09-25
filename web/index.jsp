@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Created on : 15-ago-2012, 20:32:55
+    Created on : 15-ago-2013, 20:32:55
     Author     : Pablo
 --%>
 
@@ -22,7 +22,8 @@
         <div class="well">
      
             <ul class="thumbnails">
-            <%    
+            <%
+                
             ArrayList<Producto> listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
             Iterator<Producto> itr = listaProductos.iterator();
             while (itr.hasNext()) {

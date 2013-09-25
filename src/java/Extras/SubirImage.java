@@ -22,7 +22,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author Nicolas
+ * @author Pablo
  */
 @MultipartConfig
 @WebServlet(name = "SubirImage", urlPatterns = {"/SubirImage"})
@@ -49,7 +49,7 @@ public class SubirImage extends HttpServlet {
             String filename = s.nextLine();    // read filename from stream
 
             // get filename to use on the server
-            String outputfile = "D:/Documentos/NetBeansProjects/Final-Java-1/web/images/"+filename;  // get path on the server
+            String outputfile = "C:/Documentos/NetBeansProjects/Final-Java-1/web/images/"+filename;  // get path on the server
             
              out.println("UBICACION: "+outputfile);
              FileOutputStream os = new FileOutputStream (outputfile);
