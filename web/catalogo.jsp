@@ -2,6 +2,8 @@
     Document   : index
     Created on : 15-ago-2013, 20:32:55
     Author     : Pablo
+
+    Lista todos los productos de la base de datos
 --%>
 
 <%@page import="java.util.Iterator"%>
@@ -14,14 +16,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Catálogo de Productos</title>
          <jsp:include page="includes/scripts.jsp" flush="false" />
     </head>
     <body>
          <jsp:include page="includes/menu.jsp" flush="false" />
         <div class="well">
             <ul class="thumbnails">
-            <%    
+            <%
             ArrayList<Producto> listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
             Iterator<Producto> itr = listaProductos.iterator();
             while (itr.hasNext()) {
@@ -35,14 +37,16 @@
                     <div class="caption">
                       <h3><%out.println(producto.getNombre());%></h3>
                       
-                      <p> <%if(producto.getDescripcion().length()>25){
+                      <p> <%
+                      //Acorto la cantidad de caracteres de la descripción a 25 caracteres
+                      if(producto.getDescripcion().length()>25){
                           out.println(producto.getDescripcion().substring(0, 25));
                       }
                       else{
                           out.println(producto.getDescripcion());
                       };
                       %>...</p>
-                      <a href="product.jsp?producto=<%out.println(producto.getId());%>" class="btn btn-primary span1">Ver Más</a>
+                      <a href="product.jsp?producto=<%out.println(producto.getId());%>" class="btn btn-primary">Ver Más</a>
                     </div>
                 </div>
             </li>

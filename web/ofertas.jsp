@@ -41,7 +41,7 @@
                           out.println(producto.getDescripcion());
                       };
                       %>...</p>
-                      <a href="product.jsp?producto=<%out.println(producto.getId());%>" class="btn btn-primary span1">Ver Más</a>
+                      <a href="product.jsp?producto=<%out.println(producto.getId());%>" class="btn btn-primary">Ver Más</a>
                     </div>
                 </div>
             </li>

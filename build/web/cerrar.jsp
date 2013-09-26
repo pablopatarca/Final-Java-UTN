@@ -3,7 +3,7 @@
     Created on : 07/09/2013, 19:45:55
     Author     : Pablo
 
-    Cierra la session y retorna al index
+    Cierra la session y redirecciona al index
 --%>
 
 <%

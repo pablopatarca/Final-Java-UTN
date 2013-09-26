@@ -24,7 +24,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  * Agrega un producto al carrito.
- * @author bengui
+ * @author Pablo
  */
 @WebServlet(name = "Carrito", urlPatterns = {"/Carrito"})
 public class Carrito extends HttpServlet {

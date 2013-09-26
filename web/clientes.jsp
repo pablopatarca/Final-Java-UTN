@@ -2,6 +2,8 @@
     Document   : clientes
     Created on : 05/11/2013, 18:54:20
     Author     : Pablo
+
+    Lista los clientes
 --%>
 
 <%@page import="java.util.ArrayList"%>
@@ -13,7 +15,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Lista de Clientes</title>
         <jsp:include page="includes/scripts.jsp" flush="false" />
     </head>
     <body>

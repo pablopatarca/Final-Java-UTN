@@ -1,7 +1,9 @@
 <%-- 
     Document   : carrito
-    Created on : 08/09/2012, 16:09:38
-    Author     : bengui
+    Created on : 08/09/2013, 16:09:38
+    Author     : Pablo
+
+    Muestra el carrito del usuario con sus productos
 --%>
 
 <%@page import="java.util.Iterator"%>
@@ -12,7 +14,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Carrito</title>
+        <title>Carrito de Compras</title>
         <jsp:include page="includes/scripts.jsp" flush="false" />
     </head>
     <body>
@@ -26,27 +28,23 @@
                     <table calss="table">
                         <tr>
                             <th>Nombre</th>
-                            <!--<th>Descripcion</th>
-                            <th>Presentacion</th>-->
                             <th>Cantidad</th>
                             <th>SubTotal</th>
                             <th></th>
                         </tr>
                     <%
-                        //HttpSession sesion = request.getSession();
                         HttpSession sesion = request.getSession(false);
                         ArrayList<Producto> listaProductos;
                         double total = 0;
                         double subtotal = 0;
                         if(sesion.getAttribute("listaProductos") != null ){
+                            
                             //Agrego el producto a la lista de la sesion
                             listaProductos = (ArrayList<Producto>) sesion.getAttribute("listaProductos");
 
                             for( Producto producto : listaProductos){
                                 out.println("<tr>");
                                 out.println("<td>" + producto.getNombre() +"</td>");
-                                //out.println("<td>" + producto.getDescripcion() +"</td>");
-                                //out.println("<td>" + producto.getPresentacion() +"</td>");
                                 out.println("<td>" + producto.getCanidad() +"</td>");
                                 subtotal = Math.rint((producto.getCanidad() * producto.getPrecio())*100)/100;
                                 out.println("<td>" + subtotal +"</td>");

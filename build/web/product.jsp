@@ -7,7 +7,6 @@
 <%@page import="Classes.Producto"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="Datos.Producto_Datos"%>
-<%//@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page contentType="text/html;charset=UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -32,8 +31,8 @@
                 <h2 class="span2" style="float:right; text-align: right;">$ <%out.println(rs.getPrecio());%></h2>
             </div>
             <div class="well product span6">
-                <p><%out.println(rs.getDescripcion());%></p>
-                <p><%out.println(rs.getPresentacion());%></p>  
+                <p>Descripción: <%out.println(rs.getDescripcion());%></p>
+                <p>Presentación: <%out.println(rs.getPresentacion());%></p>  
             </div>
             <div class="product">
 
@@ -44,24 +43,12 @@
                     
                         %>
                         <div class="control-group span5" >
-                            <form method="post" action="Carrito" class="form-horizontal span3">
+                            <form method="post" action="Carrito" class="form-horizontal">
                                 <input type="hidden" name="producto_id" value="<%out.println(rs.getId());%>>" />
-                                <select name="cantidad" class="control span1">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
+                                <input type="number" name="cantidad" min="0" placeholder="Cantidad" />
                                 <input type="submit" value="Agregar al carrito" class="control btn" />
                             </form>
                         </div>
-                        <!--
-                        <div class="offset2 span3">
-                            <a class="btn btn-large">Editar</a>
-                            <a class="btn btn-large">Borrar</a>
-                        </div>
-                        -->
                         <% }
 
                         %>
