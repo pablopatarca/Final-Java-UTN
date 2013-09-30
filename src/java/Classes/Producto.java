@@ -6,14 +6,14 @@ package Classes;
 
 /**
  *
- * @author Nicolas
+ * @author Pablo
  */
 public class Producto {
         private int id;
 	private String nombre;
 	private String descripcion;
         private String presentacion;
-        private String en_oferta;
+        private int en_oferta;
         private int cantidad;
         private String imagen;
         private Double precio = 0.0;
@@ -45,13 +45,13 @@ public class Producto {
 	public void setPresentacion(String presentation) {
 		this.presentacion = presentation;
 	}
-        public String getEnOferta() {
+        public int getEnOferta() {
 		return en_oferta;
 	}
          public Double getPrecio() {
 		return precio;
 	}
-	public void setEnOferta(String promoted) {
+	public void setEnOferta(int promoted) {
 		this.en_oferta = promoted;
 	}
         

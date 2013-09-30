@@ -64,7 +64,7 @@
                      <td width="350">
                          <select name="en_oferta">
                              <% 
-                             if(producto.getEnOferta().equals("0")){
+                             if(producto.getEnOferta() == 0){
                              %>
                              <option selected="true" value="0">No</option>
                              <option value="1">Si</option>

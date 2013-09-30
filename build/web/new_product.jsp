@@ -1,7 +1,7 @@
 <%-- 
     Document   : new_product.jsp
-    Created on : 30-ago-2012, 22:20:25
-    Author     : Nicolas
+    Created on : 30-ago-2013, 22:20:25
+    Author     : Pablo
 --%>
 
 
@@ -56,16 +56,14 @@
     </script>
     </div>
     <%
-        if(request.getAttribute("mensaje")!=null){
+        if(request.getAttribute("mensaje") != null){
             out.println("<div class='alert'><p>" + request.getAttribute("mensaje") + "</p></div>");
         }
     %>
     
     <div class="contenido well">
-       
     
         <h1>Ingrese los datos</h1>
-    
         <form name="formReg" method="POST" action="NuevoProducto">
             <input type="hidden" name="enviado" value="1" />
             <table width="700px" border="0" >

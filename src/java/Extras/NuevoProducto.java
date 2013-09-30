@@ -6,7 +6,6 @@
 import Classes.Producto;
 import Datos.Producto_Datos;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 /**
  *
- * @author Nicolas
+ * @author Pablo
  */
  @WebServlet(name = "NuevoProducto", urlPatterns = {"/NuevoProducto"})
 public class NuevoProducto extends HttpServlet {
@@ -36,16 +35,15 @@ public class NuevoProducto extends HttpServlet {
 		RequestDispatcher vista = request.getRequestDispatcher("new_product.jsp");
 		Boolean resultado = null;
 		String mensaje = null;
-                String name = request.getParameter ("nombre");
-                String descripcion = request.getParameter ("descripcion");
-                String presentacion = request.getParameter ("presentacion");
-                String en_oferta = request.getParameter ("en_oferta");
+                String name = request.getParameter("nombre");
+                String descripcion = request.getParameter("descripcion");
+                String presentacion = request.getParameter("presentacion");
+                int en_oferta = Integer.parseInt(request.getParameter("en_oferta"));
                 Double precio;
                 try{
                     precio = Double.parseDouble(request.getParameter("precio"));
                 }catch(Exception e){
                     precio = 0.0;
-                    
                 }
 
                 Producto producto = new Producto();
@@ -57,18 +55,17 @@ public class NuevoProducto extends HttpServlet {
 
                 try
                 {
-                        Producto_Datos.nuevoProducto(producto);
-                        mensaje = "Producto creado con exito!!!";
-
-                        //response.sendRedirect("/index");
-
+                    Producto_Datos.nuevoProducto(producto);
+                    System.out.println(producto);
+                    mensaje = "Producto creado con exito!!!";
+                    //response.sendRedirect("/index");
                 }catch(Exception e)
                 {
-                        mensaje = "Error al crear nuevo producto !!!!" ;
-
+                    mensaje = "Error al crear nuevo producto !!!! "+e ;
+                    //System.out.println(producto);
                 }	
 		request.setAttribute("mensaje", mensaje);
-		request.setAttribute("resultado", resultado);
+		//request.setAttribute("resultado", resultado);
                 //response.sendRedirect("new_product.jsp");
 		vista.forward(request, response);
                 //return;

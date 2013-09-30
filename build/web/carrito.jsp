@@ -16,18 +16,23 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Carrito de Compras</title>
         <jsp:include page="includes/scripts.jsp" flush="false" />
+        <style>
+        th{
+            padding: 0 70px 0 0;
+        }
+        </style>
     </head>
     <body>
         <jsp:include page="includes/menu.jsp" flush="false" />
-        <h1>Mi Carrito</h1>
         
         <div class="container carrito">
+            <h2>Mi Lista de Productos</h2>
             <div class="span10">
-                <a href="limpiar_carrito.jsp" class="btn">limpiar carrito</a>
                 <div class="span8">
-                    <table calss="table">
+                    <table calss="table lista-productos">
                         <tr>
                             <th>Nombre</th>
+                            <th>Precio</th>
                             <th>Cantidad</th>
                             <th>SubTotal</th>
                             <th></th>
@@ -45,10 +50,11 @@
                             for( Producto producto : listaProductos){
                                 out.println("<tr>");
                                 out.println("<td>" + producto.getNombre() +"</td>");
+                                out.println("<td>" + producto.getPrecio() +"</td>");
                                 out.println("<td>" + producto.getCanidad() +"</td>");
                                 subtotal = Math.rint((producto.getCanidad() * producto.getPrecio())*100)/100;
                                 out.println("<td>" + subtotal +"</td>");
-                                total =+ subtotal;
+                                total = total + subtotal;
                                 out.println("<td><a href='quitar.jsp?producto_id=" + producto.getId() + "' class='btn'>X</a></td>");
                                 out.println("</tr>");
                             }
@@ -65,6 +71,7 @@
             
                 <form method="post" action="ArmarPedido" class="form-horizontal">
                     <input type="submit" value="Realizar Pedido" class="btn span3" />
+                    <a href="limpiar_carrito.jsp" class="btn">limpiar carrito</a>
                 </form>
             </div>
         </div>

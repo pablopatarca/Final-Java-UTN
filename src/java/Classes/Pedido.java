@@ -4,11 +4,12 @@
  */
 package Classes;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 /**
  *
- * @author Nicolas
+ * @author Pablo
  */
 public class Pedido {
    
@@ -53,7 +54,7 @@ public class Pedido {
     public double calcularTotal(){
         total = 0;
         for (Producto producto : listaProductos){
-            total = total + producto.getPrecio();
+            total = total + (producto.getPrecio() * producto.getCanidad());
         }
         return total;
     }

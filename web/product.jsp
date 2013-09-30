@@ -22,7 +22,7 @@
             HttpSession sesion = request.getSession(false);
             
             Producto rs = Producto_Datos.getProducto(request.getParameter("producto"));
-            %>   
+            %>
             <a class="thumbnail pull-right span3">
                 <img class="image_description" src="images/<%out.println(rs.getImagen());%>" alt="">
             </a>
@@ -45,7 +45,7 @@
                         <div class="control-group span5" >
                             <form method="post" action="Carrito" class="form-horizontal">
                                 <input type="hidden" name="producto_id" value="<%out.println(rs.getId());%>>" />
-                                <input type="number" name="cantidad" min="0" placeholder="Cantidad" />
+                                <input type="number" name="cantidad" min="0" placeholder="Cantidad" required />
                                 <input type="submit" value="Agregar al carrito" class="control btn" />
                             </form>
                         </div>

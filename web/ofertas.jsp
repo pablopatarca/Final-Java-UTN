@@ -1,7 +1,7 @@
 <%-- 
     Document   : ofertas
-    Created on : 26-ago-2012, 20:43:46
-    Author     : Nicolas
+    Created on : 26-ago-2013, 20:43:46
+    Author     : Pablo
 --%>
 <%@page import="java.util.Iterator"%>
 <%@page import="Datos.Producto_Datos"%>
@@ -20,12 +20,12 @@
          <jsp:include page="includes/menu.jsp" flush="false" />
         <div class="well">
             <ul class="thumbnails">
-            <%    
-            ArrayList<Producto> listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
+            <%
+            ArrayList<Producto> listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(1);
             Iterator<Producto> itr = listaProductos.iterator();
             while (itr.hasNext()) {
               Producto producto = itr.next();
-            %>       
+            %>
            <li class="span4">
                 <div class="thumbnail">
                     <div class="image_container">

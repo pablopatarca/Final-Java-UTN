@@ -26,7 +26,7 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author bengui
+ * @author Pablo
  */
 @WebServlet(name = "ArmarPedido", urlPatterns = {"/ArmarPedido"})
 public class ArmarPedido extends HttpServlet {
@@ -44,8 +44,6 @@ public class ArmarPedido extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         HttpSession sesion = request.getSession();
-
-      // System.out.println(""+Calendar.YEAR+"/"+Calendar.MONTH+"/"+Calendar.DATE+"|"+Calendar.HOUR_OF_DAY+":"+Calendar.MINUTE+":"+Calendar.SECOND+":"+Calendar.MILLISECOND );
         
         Calendar cal1 = Calendar.getInstance();
         System.out.println(""+cal1.get(Calendar.DATE)+"/"+cal1.get(Calendar.MONTH)
@@ -53,12 +51,14 @@ public class ArmarPedido extends HttpServlet {
         +":"+cal1.get(Calendar.MINUTE)+":"+cal1.get(Calendar.SECOND)
         +":"+cal1.get(Calendar.MILLISECOND));      
         
+
         Pedido pedido = new Pedido();
         pedido.setListaProductos((ArrayList<Producto>)sesion.getAttribute("listaProductos"));
         Cliente cliente = (Cliente)sesion.getAttribute("cliente");
         pedido.setClienteId(cliente.getId());
         pedido.setFecha(cal1.get(Calendar.YEAR)+"-"+cal1.get(Calendar.MONTH)+"-"+cal1.get(Calendar.DATE));
-        pedido.calcularTotal();
+        double valorTotal = pedido.calcularTotal();
+        System.out.println("Monto total: "+valorTotal);
         
         try {
             Pedido_Datos.nuevoPedido(pedido);

@@ -23,11 +23,20 @@
      
             <ul class="thumbnails">
             <%
+                HttpSession sesion = request.getSession();
                 
-            ArrayList<Producto> listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
-            Iterator<Producto> itr = listaProductos.iterator();
-            while (itr.hasNext()) {
-              Producto producto = itr.next();
+                ArrayList<Producto> listaProductos;
+                
+                //if(request.getParameter("string").equals(null) ){
+                //    listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
+                //}else{
+                     listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(request.getParameter("string"));
+                //}
+                
+                
+                Iterator<Producto> itr = listaProductos.iterator();
+                while (itr.hasNext()) {
+                  Producto producto = itr.next();
             %>       
            <li class="span4">
                 <div class="thumbnail">

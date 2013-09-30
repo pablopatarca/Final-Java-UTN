@@ -1,7 +1,7 @@
 <%@page import="Classes.Cliente"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="true"%>
 
-<div class="">
+<div class="navbar">    
     <div class="well" style="padding: 5px;">
         <div style="float: right">
         <%
@@ -23,7 +23,6 @@
           </label>
           <button type="submit" name="submit" class="btn">Entrar</button>
         </form>
-    
             <%
             }     
             %>
@@ -39,7 +38,7 @@
     <div class="menu">
         <ul class="nav">
             <li>
-                <a tabindex="-1" href="contacto.jsp">Contacto</a>
+                <a tabindex="-1" href="index.jsp">Inicio</a>
             </li>
             <%
             if(sesion.getAttribute("cliente")==null){
@@ -56,13 +55,8 @@
                     <li>
                         <a href="ofertas.jsp"><div class="titulos_submenu">Ofertas</div></a>
                     </li>
-                    <!--
                     <li>
-                        <a href="promocionados.jsp"><div class="titulos_submenu">Promocionados</div></a>
-                    </li>
-                    -->
-                    <li>
-                        <a href="catalogo.jsp"><div class="titulos_submenu">Lista Completa</div></a>
+                        <a href="catalogo.jsp"><div class="titulos_submenu">Todos</div></a>
                     </li>
                 </ul>
             </li>
@@ -104,6 +98,17 @@
                 }
             }
             %>
+            <li>
+                <a tabindex="-1" href="contacto.jsp">Contacto</a>
+            </li>
+            </ul>
+        <ul class="nav" style="float: right">
+            <li>
+                <form action="index.jsp">
+                    <input class="span2" type="text" name="string" placeholder="Search" style="margin: 4px 0px 4px 0px;">
+                    <button class="btn" type="submit" style="margin: 4px 0px 4px 0px;">Search</button>
+                </form>
+            </li>
         </ul>
     </div>
  </div>

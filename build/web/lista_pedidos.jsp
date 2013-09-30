@@ -1,7 +1,7 @@
 <%-- 
     Document   : lista_pedidos
     Created on : 25/10/2012, 09:56:21
-    Author     : bengui
+    Author     : Pablo
 --%>
 
 <%@page import="com.sun.faces.facelets.tag.jstl.core.ForEachHandler"%>
@@ -30,8 +30,8 @@
                     </tr>
                             
                 <%
-                    //HttpSession sesion = request.getSession();
-                    HttpSession sesion = request.getSession(false);
+                    HttpSession sesion = request.getSession();
+                    //HttpSession sesion = request.getSession(false);
                     if(sesion.getAttribute("cliente") != null ){
                         Cliente cliente = (Cliente)sesion.getAttribute("cliente");
                         int cliente_id = cliente.getId();
