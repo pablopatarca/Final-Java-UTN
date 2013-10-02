@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Administrador
+ * @author Pablo
  */
 @WebServlet(name = "Registro", urlPatterns = {"/Registro"})
 public class Registro extends HttpServlet {
@@ -29,7 +29,7 @@ public class Registro extends HttpServlet {
     @Override
    	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
                 throws ServletException, IOException {
-		RequestDispatcher vista = request.getRequestDispatcher("register_success.jsp");
+		RequestDispatcher vista = request.getRequestDispatcher("registerSuccess.jsp");
 		Boolean resultado = null;
 		String mensaje = null;
                 String nombre = request.getParameter ("nombre");
@@ -52,17 +52,16 @@ public class Registro extends HttpServlet {
                 try
                 {       
                     if(Cliente_Datos.nuevoCliente(cliente)){
-                        mensaje = "Cliente creado con exito!!!";
-                        //response.sendRedirect("register_success.jsp");
+                        mensaje = "Cliente creado con exito!!!";                        
                     }else{
                         mensaje = "Error al crear nuevo cliente !!!!" ;
-                    }//"Error al crear nuevo cliente !!!!"
+                    }
 
                 }catch(Exception e)
                 {
 
 
-                }	
+                }
 		request.setAttribute("mensaje", mensaje);
 		request.setAttribute("resultado", resultado);
 		vista.forward(request, response);

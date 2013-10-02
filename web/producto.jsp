@@ -1,6 +1,6 @@
 <%-- 
     Document   : producto
-    Created on : 15-ago-2013, 20:32:55
+    Created on : 15/06/2013, 20:32:55
     Author     : Pablo
 --%>
 
@@ -23,13 +23,14 @@
             
             Producto rs = Producto_Datos.getProducto(request.getParameter("producto"));
             %>
-            <a class="thumbnail pull-right span3">
-                <img class="image_description" src="images/<%out.println(rs.getImagen());%>" alt="">
-            </a>
+            
             <div class="well product_desc span6">
                 <h2 class="span4"><%out.println(rs.getNombre());%></h2>
                 <h2 class="span2" style="float:right; text-align: right;">$ <%out.println(rs.getPrecio());%></h2>
             </div>
+            <a class="thumbnail pull-right span3">
+                <img class="image_description" src="images/<%out.println(rs.getImagen());%>" alt="">
+            </a>
             <div class="well product span6">
                 <p>Descripción: <%out.println(rs.getDescripcion());%></p>
                 <p>Presentación: <%out.println(rs.getPresentacion());%></p>  
@@ -56,8 +57,8 @@
                         if(sesion.getAttribute("usuario").toString().equals("administrador")){
                             %>
                             <div class="offset2 span3">
-                                <a class="btn btn-large" href="editar_producto.jsp?producto=<%out.println(rs.getId());%>">Editar</a>
-                                <a class="btn btn-large" href="eliminar_producto.jsp?producto=<%out.println(rs.getId());%>">Borrar</a>
+                                <a class="btn btn-large" href="editarProducto.jsp?producto=<%out.println(rs.getId());%>">Editar</a>
+                                <a class="btn btn-large" href="eliminarProducto.jsp?producto=<%out.println(rs.getId());%>">Borrar</a>
                             </div>
                              <%
                         }

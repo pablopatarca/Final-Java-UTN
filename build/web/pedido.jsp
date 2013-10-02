@@ -1,7 +1,7 @@
 <%-- 
     Document   : pedido
-    Created on : 23/10/2012, 10:56:58
-    Author     : bengui
+    Created on : 23-ago-2013, 10:56:58
+    Author     : Pablo
 --%>
 
 <%@page import="Classes.Pedido"%>

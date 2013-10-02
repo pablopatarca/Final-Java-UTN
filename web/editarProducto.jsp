@@ -1,5 +1,5 @@
 <%-- 
-    Document   : index
+    Document   : editarProducto
     Created on : 15-ago-2013, 20:32:55
     Author     : Pablo
 --%>
@@ -36,7 +36,7 @@
         }
         %>
         <div class="well">
-            <form name="formReg" method="POST" action="actualizar_producto.jsp">
+            <form name="formReg" method="POST" action="actualizarProducto.jsp">
              <input type="hidden" name="enviado" value="1" />
              <table width="700px" border="0" >
                   <tr>

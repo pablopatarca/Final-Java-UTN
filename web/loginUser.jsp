@@ -1,7 +1,7 @@
 <%-- 
-    Document   : login_user
-    Created on : 16-ago-2012, 19:19:34
-    Author     : Nicolas
+    Document   : loginUser
+    Created on : 16/05/2013, 19:19:34
+    Author     : Pablo
 --%>
 
 <%@ page language="java" import="java.sql.*" errorPage="" %>

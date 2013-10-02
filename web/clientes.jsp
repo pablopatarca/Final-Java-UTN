@@ -1,6 +1,6 @@
 <%-- 
     Document   : clientes
-    Created on : 05-05-2013, 18:54:20
+    Created on : 05/05/2013, 18:54:20
     Author     : Pablo
 
     Lista los clientes
@@ -44,7 +44,7 @@
                     out.println("<td>" + cliente.getDireccion() + "</td>");
                     out.println("<td>" + cliente.getTelefono() + "</td>");
                     out.println("<td>" + cliente.getEmail() + "</td>");
-                    out.println("<td><a href='eliminar_cliente.jsp?cliente_id=" + cliente.getId() + "' class='btn'>X</a></td>");
+                    out.println("<td><a href='eliminarCliente.jsp?cliente_id=" + cliente.getId() + "' class='btn'>X</a></td>");
                     out.println("</tr>");
                 }
                 %>

@@ -4,13 +4,14 @@
 <div class="navbar">    
     <div class="well" style="padding: 5px;">
         <div style="float: right">
+            <a href="editar.jsp"><i class="icon-user"></i>
         <%
             HttpSession sesion = request.getSession(false);
             if(sesion.getAttribute("cliente")!=null){
                     out.println(sesion.getAttribute("usuario"));
                     
             %>
-            <a href="cerrar.jsp">Cerrar sesi&oacute;n</a></h3>
+            </a><a href="cerrar.jsp">Cerrar sesi&oacute;n</a></h3>
             <%
             }
             else{
@@ -38,25 +39,25 @@
     <div class="menu">
         <ul class="nav">
             <li>
-                <a tabindex="-1" href="index.jsp">Inicio</a>
+                <a tabindex="-1" href="index.jsp"><i class="icon-home"></i> Inicio</a>
             </li>
             <%
             if(sesion.getAttribute("cliente")==null){
             %>
             <li>
-                <a tabindex="-1" href="register.jsp">Registrarse</a>
+                <a tabindex="-1" href="register.jsp"><i class="icon-pencil"></i> Registrarse</a>
             </li>
             <%
             }    
             %>
             <li>
-                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" >Productos</a>
+                <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown" ><i class="icon-shopping-cart"></i> Productos</a>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                     <li>
-                        <a href="ofertas.jsp"><div class="titulos_submenu">Ofertas</div></a>
+                        <a href="ofertas.jsp"><div class="titulos_submenu"> Ofertas</div></a>
                     </li>
                     <li>
-                        <a href="catalogo.jsp"><div class="titulos_submenu">Todos</div></a>
+                        <a href="catalogo.jsp"><div class="titulos_submenu"> Todos</div></a>
                     </li>
                 </ul>
             </li>
@@ -64,7 +65,7 @@
             if(sesion.getAttribute("cliente")!=null){
                 if(sesion.getAttribute("usuario").toString().equals("administrador")){
             %>
-                <li><a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">Administrador</a>
+                <li><a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Administrador</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         <li>
                             <a href="nuevoProducto.jsp"><div class="titulos_submenu">Nuevo Producto</div></a>
@@ -81,7 +82,7 @@
                 }else{   
             %>
                <li>
-                   <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">Usuario</a>
+                   <a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> Usuario</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         <li>
                             <a href="carrito.jsp"><div class="titulos_submenu">Mi carrito</div></a>
@@ -90,7 +91,7 @@
                             <a href="editar.jsp"><div class="titulos_submenu">Mi información</div></a>
                         </li>
                         <li>
-                            <a href="lista_pedidos.jsp"><div class="titulos_submenu">Mis pedidos</div></a>
+                            <a href="listaPedidos.jsp"><div class="titulos_submenu">Mis pedidos</div></a>
                         </li>
                     </ul>
                </li>
@@ -99,14 +100,14 @@
             }
             %>
             <li>
-                <a tabindex="-1" href="contacto.jsp">Contacto</a>
+                <a tabindex="-1" href="contacto.jsp"><i class="icon-envelope"></i> Contacto</a>
             </li>
             </ul>
         <ul class="nav" style="float: right">
             <li>
                 <form action="index.jsp">
-                    <input class="span2" type="text" name="string" placeholder="Search" style="margin: 4px 0px 4px 0px;">
-                    <button class="btn" type="submit" style="margin: 4px 0px 4px 0px;">Search</button>
+                    <input class="span2" type="text" name="string" placeholder="Buscar" style=" margin: 4px 0px 4px 0px;">
+                    <button class="btn" type="submit" style="margin: 4px 0px 4px 0px;">Buscar</button>
                 </form>
             </li>
         </ul>

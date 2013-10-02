@@ -1,7 +1,7 @@
 <%-- 
-    Document   : limpiar_carrito
-    Created on : 23/10/2012, 11:20:20
-    Author     : bengui
+    Document   : limpiarCarrito
+    Created on : 23-06-2013, 11:20:20
+    Author     : Pablo
 --%>
 
 <%@page import="java.util.ArrayList"%>

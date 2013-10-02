@@ -1,5 +1,5 @@
 <%-- 
-    Document   : eliminar_producto.jsp
+    Document   : eliminarProducto.jsp
     Created on : 19-nov-2012, 20:42:10
     Author     : Nicolas
 --%>

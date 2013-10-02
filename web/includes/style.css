@@ -80,7 +80,7 @@ body{
     margin:0 auto;
 }
 .product_desc, .product{
-    width:60%;
+    width:50%;
     float:left;
 }
 .product_desc h1 {

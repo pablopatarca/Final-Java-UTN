@@ -1,6 +1,6 @@
 <%-- 
     Document   : nuevoProducto.jsp
-    Created on : 30-ago-2013, 22:20:25
+    Created on : 30/06/2013, 22:20:25
     Author     : Pablo
 --%>
 
@@ -57,7 +57,7 @@
     </div>
     <%
         if(request.getAttribute("mensaje") != null){
-            out.println("<div class='alert'><p>" + request.getAttribute("mensaje") + "</p></div>");
+            out.println("<div class='alert alert-success'><p>" + request.getAttribute("mensaje") + "</p></div>");
         }
     %>
     
@@ -92,7 +92,7 @@
                 </tr>
                 
                 <tr>
-                    <td colspan="2" align="center"><input name="Enviar" type="submit" id="submit-button" value="Enviar" /></td>
+                    <td colspan="2" align="center"><input name="Enviar" type="submit" id="submit-button" value="Enviar" class="btn btn-control"/></td>
                 </tr>
             </table>
         </form>

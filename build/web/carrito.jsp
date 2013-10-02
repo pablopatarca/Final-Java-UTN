@@ -28,7 +28,7 @@
         <div class="container carrito">
             <h2>Mi Lista de Productos</h2>
             <div class="span10">
-                <div class="span8">
+                <div class="span8" style="width: 720px;">
                     <table calss="table lista-productos">
                         <tr>
                             <th>Nombre</th>
@@ -55,7 +55,7 @@
                                 subtotal = Math.rint((producto.getCanidad() * producto.getPrecio())*100)/100;
                                 out.println("<td>" + subtotal +"</td>");
                                 total = total + subtotal;
-                                out.println("<td><a href='quitar.jsp?producto_id=" + producto.getId() + "' class='btn'>X</a></td>");
+                                out.println("<td><a href='quitar.jsp?producto_id=" + producto.getId() + "' class='btn'><i class='icon-remove'></a></td>");
                                 out.println("</tr>");
                             }
                         }
@@ -67,11 +67,10 @@
                     %>
                     </h3>
                 </div>
-                <a href="index.jsp" class="btn span3">Volver</a>
-            
                 <form method="post" action="ArmarPedido" class="form-horizontal">
-                    <input type="submit" value="Realizar Pedido" class="btn span3" />
-                    <a href="limpiar_carrito.jsp" class="btn">limpiar carrito</a>
+                    <a href="index.jsp" class="btn span3"><i class="icon-arrow-left "></i> Volver</a>
+                    <a href="limpiarCarrito.jsp" class="btn"><i class="icon-remove "></i> limpiar carrito</a>
+                    <a type="submit" value="Realizar Pedido" class="btn span3"><i class="icon-shopping-cart"></i> Realizar Pedido</a>
                 </form>
             </div>
         </div>

@@ -1,7 +1,7 @@
 <%-- 
-    Document   : register_success
-    Created on : 23-ago-2012, 19:44:48
-    Author     : Nicolas
+    Document   : registerSuccess
+    Created on : 23/06/2013, 19:44:48
+    Author     : Pablo
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

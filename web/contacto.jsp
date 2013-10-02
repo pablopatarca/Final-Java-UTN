@@ -144,7 +144,7 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <input name="Enviar" value="Enviar" id="submit-button" type="submit" />
+                    <input type="submit" name="Enviar" value="Enviar" id="submit-button" class="btn btn-control" />
                 </div>
         </form>
 
