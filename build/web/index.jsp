@@ -14,7 +14,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Verte Crecer</title>
+        <title>Delivery</title>
         <jsp:include page="includes/scripts.jsp" flush="false" />
     </head>
     <body>
@@ -54,6 +54,7 @@
                       };
                       %>...</p>
                       <a href="producto.jsp?producto=<%out.println(producto.getId());%>" class="btn btn-primary">Ver Más</a>
+                      <p class="" style="float: right;" > $ <%out.println(producto.getPrecio());%></p>
                     </div>
                 </div>
             </li>

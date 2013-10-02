@@ -7,7 +7,6 @@
 --%>
 
 <%@page import="Classes.Cliente"%>
-<%@page import="Classes.Cliente"%>
 <%@page language="java" session="true" %>
 <head>
     <title>Conctactate con nosotros</title>

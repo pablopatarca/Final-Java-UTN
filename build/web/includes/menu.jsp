@@ -4,12 +4,13 @@
 <div class="navbar">    
     <div class="well" style="padding: 5px;">
         <div style="float: right">
-            <a href="editar.jsp"><i class="icon-user"></i>
         <%
             HttpSession sesion = request.getSession(false);
             if(sesion.getAttribute("cliente")!=null){
+                %>
+            <a href="editar.jsp"><i class="icon-user"></i>
+                <%
                     out.println(sesion.getAttribute("usuario"));
-                    
             %>
             </a><a href="cerrar.jsp">Cerrar sesi&oacute;n</a></h3>
             <%

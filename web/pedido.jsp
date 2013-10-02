@@ -23,13 +23,10 @@
                 <table calss="table-striped">
                     <tr>
                         <th>Nombre</th>
-                        <!--<th>Descripcion</th>
-                        <th>Presentacion</th>-->
                         <th>Cantidad</th>
                         <th>SubTotal</th>
                     </tr>
                     <%
-                        //HttpSession sesion = request.getSession();
                         HttpSession sesion = request.getSession(false);
                         ArrayList<Producto> listaProductos;
                         Pedido pedido;
@@ -41,8 +38,6 @@
                             for( Producto producto : listaProductos){
                                 out.println("<tr>");
                                 out.println("<td>" + producto.getNombre() +"</td>");
-                                //out.println("<td>" + producto.getDescripcion() +"</td>");
-                                //out.println("<td>" + producto.getPresentacion() +"</td>");
                                 out.println("<td>" + producto.getCanidad() +"</td>");
                                 out.println("<td>" + (Math.rint((producto.getCanidad() * producto.getPrecio())*100)/100)  +"</td>");
                                 out.println("</tr>");

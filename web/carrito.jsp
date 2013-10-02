@@ -67,10 +67,10 @@
                     %>
                     </h3>
                 </div>
-                <form method="post" action="ArmarPedido" class="form-horizontal">
+                <form method="POST" action="ArmarPedido" class="form-horizontal">
                     <a href="index.jsp" class="btn span3"><i class="icon-arrow-left "></i> Volver</a>
-                    <a href="limpiarCarrito.jsp" class="btn"><i class="icon-remove "></i> limpiar carrito</a>
-                    <a type="submit" value="Realizar Pedido" class="btn span3"><i class="icon-shopping-cart"></i> Realizar Pedido</a>
+                    <input type="submit" value="Realizar Pedido" class="btn span3"><i class="icon-shopping-cart"></i> Realizar Pedido</input>
+                    <a href="limpiarCarrito.jsp" class="btn span3" style="margin-top: 10px; margin-bottom: 10px;"><i class="icon-remove "></i> limpiar carrito</a>
                 </form>
             </div>
         </div>

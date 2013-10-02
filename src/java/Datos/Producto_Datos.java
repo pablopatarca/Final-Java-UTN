@@ -152,6 +152,7 @@ public class Producto_Datos {
                 producto.setNombre(res.getString("nombre"));
                 producto.setDescripcion(res.getString("descripcion"));
                 producto.setPresentacion(res.getString("presentacion"));
+                producto.setPrecio(res.getDouble("precio"));
                 producto.setImagen(res.getString("imagen"));
 
                 listaProductos.add(producto);
@@ -189,6 +190,7 @@ public class Producto_Datos {
                 producto.setNombre(res.getString("nombre"));
                 producto.setDescripcion(res.getString("descripcion"));
                 producto.setPresentacion(res.getString("presentacion"));
+                producto.setPrecio(res.getDouble("precio"));
                 producto.setImagen(res.getString("imagen"));
 
                 listaProductos.add(producto);
