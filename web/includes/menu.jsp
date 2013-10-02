@@ -67,10 +67,10 @@
                 <li><a tabindex="-1" href="#" class="dropdown-toggle" data-toggle="dropdown">Administrador</a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
                         <li>
-                            <a href="new_product.jsp"><div class="titulos_submenu">Nuevo Producto</div></a>
+                            <a href="nuevoProducto.jsp"><div class="titulos_submenu">Nuevo Producto</div></a>
                         </li>
                         <li>
-                            <a href="pedidos_realizados.jsp"><div class="titulos_submenu">Pedidos</div></a>
+                            <a href="pedidosRealizados.jsp"><div class="titulos_submenu">Pedidos</div></a>
                         </li>
                         <li>
                             <a href="clientes.jsp"><div class="titulos_submenu">Clientes</div></a>

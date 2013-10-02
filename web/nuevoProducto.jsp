@@ -1,5 +1,5 @@
 <%-- 
-    Document   : new_product.jsp
+    Document   : nuevoProducto.jsp
     Created on : 30-ago-2013, 22:20:25
     Author     : Pablo
 --%>

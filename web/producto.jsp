@@ -1,5 +1,5 @@
 <%-- 
-    Document   : index
+    Document   : producto
     Created on : 15-ago-2013, 20:32:55
     Author     : Pablo
 --%>

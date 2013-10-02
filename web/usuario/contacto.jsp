@@ -1,3 +1,11 @@
+<%-- 
+    Document   : contacto
+    Created on : 05/05/2013, 18:70:20
+    Author     : Pablo
+
+    Formulario de contacto
+--%>
+
 <%@page import="Classes.Cliente"%>
 <%@page import="Classes.Cliente"%>
 <%@page language="java" session="true" %>

@@ -1,6 +1,6 @@
 <%-- 
     Document   : clientes
-    Created on : 05/11/2013, 18:54:20
+    Created on : 05-05-2013, 18:54:20
     Author     : Pablo
 
     Lista los clientes

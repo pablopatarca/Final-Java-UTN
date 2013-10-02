@@ -8,5 +8,5 @@
 
 <% 
 Producto_Datos.eliminarProducto(request.getParameter("id"));
-response.sendRedirect("product.jsp?producto="+request.getParameter("id").toString());
+response.sendRedirect("producto.jsp?producto="+request.getParameter("id").toString());
 %>

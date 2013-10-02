@@ -32,7 +32,7 @@ public class NuevoProducto extends HttpServlet {
     @Override
    	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
                 throws ServletException, IOException {
-		RequestDispatcher vista = request.getRequestDispatcher("new_product.jsp");
+		RequestDispatcher vista = request.getRequestDispatcher("nuevoProducto.jsp");
 		Boolean resultado = null;
 		String mensaje = null;
                 String name = request.getParameter("nombre");
@@ -66,7 +66,7 @@ public class NuevoProducto extends HttpServlet {
                 }	
 		request.setAttribute("mensaje", mensaje);
 		//request.setAttribute("resultado", resultado);
-                //response.sendRedirect("new_product.jsp");
+                //response.sendRedirect("nuevoProducto.jsp");
 		vista.forward(request, response);
                 //return;
                 
