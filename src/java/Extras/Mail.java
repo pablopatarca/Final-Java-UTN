@@ -22,7 +22,7 @@ import javax.mail.Transport;
 
 /**
  *
- * @author Nicolas
+ * @author Pablo
  */
 @WebServlet(name = "Mail", urlPatterns = {"/Mail"})
 public class Mail extends HttpServlet {
@@ -87,7 +87,7 @@ public class Mail extends HttpServlet {
            String mensaje = request.getParameter ("mensaje");
            String destinatario = request.getParameter ("destinatario");
            try{  
-              msg.setFrom(new InternetAddress("narc88@gmail.com"));  
+              msg.setFrom(new InternetAddress("pablopatarca@gmail.com"));  
               msg.setRecipient(Message.RecipientType.TO,new InternetAddress(destinatario));      
                    
               msg.setSentDate(new java.util.Date());      

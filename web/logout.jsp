@@ -1,7 +1,7 @@
 <%-- 
-    Document   : success
-    Created on : 16-ago-2012, 19:44:20
-    Author     : Nicolas
+    Document   : logout
+    Created on : 16-05-2013, 19:44:20
+    Author     : Pablo
 --%>
 
 <%@ page contentType="text/html; charset=iso-8859-1" language="java"%>

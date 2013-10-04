@@ -143,7 +143,9 @@
                     </div>
                 </div>
                 <div class="control-group">
-                    <input type="submit" name="Enviar" value="Enviar" id="submit-button" class="btn btn-control" />
+                    <div class="controls">
+                        <input type="submit" name="Enviar" value="Enviar" id="submit-button" class="btn btn-control" />
+                    </div>
                 </div>
         </form>
 

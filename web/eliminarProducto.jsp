@@ -1,7 +1,7 @@
 <%-- 
     Document   : eliminarProducto.jsp
-    Created on : 19-nov-2012, 20:42:10
-    Author     : Nicolas
+    Created on : 19-05-2013, 20:42:10
+    Author     : Pablo
 --%>
 <%@page import="Classes.Producto"%>
 <%@page import="Datos.Producto_Datos"%>

@@ -67,7 +67,7 @@ public class Pedido {
         /*
         SimpleDateFormat sdf = new SimpleDateFormat("dd MMMM yyyy");
         return sdf.format(sdf.parse(fecha));
-        * 2012-03-03
+        * 07-06-2013
         */
         String year = this.fecha.substring(0, 4);
         String month = this.fecha.substring(5, 7);

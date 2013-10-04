@@ -25,7 +25,7 @@ function validateDate(){
 }
 
 function validateYear(value){
-	if(value<2012 && value>1900){
+	if(value<2013 && value>1900){
 		return true;
 	}else{
 		return false;
