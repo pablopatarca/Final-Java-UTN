@@ -30,7 +30,7 @@
                 //if(request.getParameter("string").equals(null) ){
                 //    listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(0);
                 //}else{
-                     listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(request.getParameter("string"));
+                listaProductos = (ArrayList<Producto>) Producto_Datos.getListaProductos(request.getParameter("string"));
                 //}
                 
                 

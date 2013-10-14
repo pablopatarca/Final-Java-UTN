@@ -21,7 +21,7 @@ public class Connection_class{
       Connection conn = null;
       String url = "jdbc:mysql://localhost:3306/";
       //String url = "jdbc:mysql://mysql-proyecto-java.jelastic.servint.net/";
-      String dbName = "jdelivery_db";
+      String dbName = "jdelivery";
       String driver = "com.mysql.jdbc.Driver";
       String userName = "jdelivery"; 
       String password = "2013";

@@ -1,6 +1,6 @@
 <%-- 
-    Document   : index
-    Created on : 15-ago-2013, 20:32:55
+    Document   : editar
+    Created on : 15-06-2013, 20:32:55
     Author     : Pablo
 --%>
 <%@page import="Classes.Cliente"%>
@@ -58,7 +58,9 @@
                      <td width="350"><input name="email" type="email" value="<% out.println(cliente.getEmail()); %>"  width="350px" required/></td>
                  </tr>
                  <tr>
-                     <td colspan="2" align="center"><input name="Enviar" type="submit" value="Enviar" /></td>
+                    <td colspan="2" align="center">
+                        <input name="Enviar" type="submit" value="Enviar" class="btn btn-control" />
+                    </td>
                  </tr>
              </table>
             </form>
