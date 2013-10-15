@@ -1,5 +1,5 @@
 <%@page import="Classes.Cliente"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" session="true"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" session="true"%>
 
 <div class="navbar">    
     <div class="well" style="padding: 5px;">
@@ -19,7 +19,7 @@
             %>
         <form action="login.jsp" class=" form-inline" style="margin: 0 0 0 0">
           <input type="text" class="input-small" name="usuario" size="15" tabindex="1" maxlength="20" placeholder="Usuario" class="control">
-          <input type="password" class="input-small" name="password" size="15" tabindex="2" maxlength="20" placeholder="Contraseña" class="control"/>
+          <input type="password" class="input-small" name="password" size="15" tabindex="2" maxlength="20" placeholder="ContraseÃ±a" class="control"/>
           <label class="checkbox">
             <input type="checkbox"> Recordar
           </label>
@@ -89,7 +89,7 @@
                             <a href="carrito.jsp"><div class="titulos_submenu">Mi carrito</div></a>
                         </li>
                         <li>
-                            <a href="editar.jsp"><div class="titulos_submenu">Mi información</div></a>
+                            <a href="editar.jsp"><div class="titulos_submenu">Mi informaciÃ³n</div></a>
                         </li>
                         <li>
                             <a href="listaPedidos.jsp"><div class="titulos_submenu">Mis pedidos</div></a>
