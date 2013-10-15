@@ -7,6 +7,6 @@
 <%@page import="Datos.Producto_Datos"%>
 
 <% 
-Producto_Datos.eliminarProducto(request.getParameter("id"));
-response.sendRedirect("producto.jsp?producto="+request.getParameter("id").toString());
+Producto_Datos.eliminarProducto(request.getParameter("producto"));
+response.sendRedirect("index.jsp");
 %>

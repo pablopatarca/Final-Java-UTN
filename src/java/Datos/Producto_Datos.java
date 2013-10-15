@@ -72,8 +72,11 @@ public class Producto_Datos {
             Connection con = (Connection) Extras.Connection_class.mysql_connect();
             try
             {
-                PreparedStatement pstm = (PreparedStatement) con.prepareStatement("Delete productos where productos.producto_id = ?");
-                pstm.setString(1, id);
+                PreparedStatement pstm = (PreparedStatement) con.prepareStatement("DELETE FROM productos WHERE productos.producto_id = ?");
+                pstm.setInt(1, Integer.parseInt(id));
+                
+                System.out.println(pstm);
+                
                 pstm.executeUpdate();
                 pstm.close();
                 con.close();
