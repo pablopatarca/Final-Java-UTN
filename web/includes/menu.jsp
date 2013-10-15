@@ -1,9 +1,10 @@
 <%@page import="Classes.Cliente"%>
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" session="true"%>
 
-<div class="navbar">    
+<div class="navbar">
     <div class="well" style="padding: 5px;">
-        <div style="float: right">
+        <div class="logo-portada"><img src="images/logo-portada.jpg"/></div>
+        <div style="float: right; margin-top: 20px">
         <%
             HttpSession sesion = request.getSession(false);
             if(sesion.getAttribute("cliente")!=null){
