@@ -69,9 +69,9 @@
                 </div>
                 <form method="POST" action="ArmarPedido" class="form-horizontal">
                     <a href="index.jsp" class="btn span3"><i class="icon-arrow-left "></i> Volver</a>
-                    <input type="submit" value="Realizar Pedido" class="btn span3"><i class="icon-shopping-cart"></i> Realizar Pedido</input>
-                    <a href="limpiarCarrito.jsp" class="btn span3" style="margin-top: 10px; margin-bottom: 10px;"><i class="icon-remove "></i> limpiar carrito</a>
+                    <input type="submit" value="Realizar Pedido" class="btn span3"></input>
                 </form>
+                    <a href="limpiarCarrito.jsp" class="btn span3" style="margin-top: 10px; margin-bottom: 10px;"><i class="icon-remove "></i> limpiar carrito</a>
             </div>
         </div>
     </body>

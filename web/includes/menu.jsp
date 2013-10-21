@@ -3,7 +3,7 @@
 
 <div class="navbar">
     <div class="well" style="padding: 5px;">
-        <div class="logo-portada"><img style="width: 10%;" src="images/logo-portada.jpg"/></div>
+        <div class="logo-portada"><img style="width: 80px;float: left;" src="images/logo-portada.jpg"/></div>
         <div style="float: right; margin-top: 20px;">
         <%
             HttpSession sesion = request.getSession(false);

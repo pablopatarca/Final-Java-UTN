@@ -47,6 +47,7 @@
                       };
                       %>...</p>
                       <a href="producto.jsp?producto=<%out.println(producto.getId());%>" class="btn btn-primary">Ver Más</a>
+                      <p class="" style="float: right;" > $ <%out.println(producto.getPrecio());%></p>
                     </div>
                 </div>
             </li>

@@ -58,6 +58,9 @@ body{
 .catalog_item{
     width:100%;
 }
+.logo-portada{
+    float: left;
+}
 
 .catalog_item img{
     width:150px;
