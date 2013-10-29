@@ -14,54 +14,67 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/validator.js"></script>
     <script>
-        $(document).ready(function(){
-           $('#submit-button').click(function(){
-              var user_info = {
-                  name                  : $('#nombre').val(),
-                  lname                 : $('#apellido').val(),
-                  phone                 : $('#telefono').val(),
-                  email                 : $('#email').val(),
-                  address               : $('#direccion').val(),
-                  username              : $('#usuario').val(),
-                  password              : $('#password').val(),
-                  repeat_password       : $('#repeat_password').val()
-              };
-              
-              if(validation(user_info)){
-                  return true;
-              }else{
-                  alert('Datos de registro incorrectos');
-                  return false;
-              }
-              
-           }); 
-        });
-        
-        function validation(user_info){
-            var result = false;
-            if(validateNotEmpty(user_info.name)){
-                    if(validateNotEmpty(user_info.lname)){
-                            if(validateNotEmpty(user_info.email)){
-                                    if(validateEmail(user_info.email)){
-                                            if(validateNotEmpty(user_info.address)){
-                                                    if(validateNotEmpty(user_info.password)){
-                                                            if(validateNotEmpty(user_info.repeat_password)){
-                                                                if(validateNotEmpty(user_info.phone)){
-                                                                    if(validateNotEmpty(user_info.username)){
-                                                                        if(user_info.repeat_password == user_info.password){
-                                                                            result = true;
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                    }	
-                                            }
-                                    }
-                            }
-                    }
-            }
+function validate(form){
 
-            return result;
+	if(form.nombre.value.length == 0) { //comprueba que no esté vacío
+		form.nombre.focus();   
+		alert('No has escrito tu nombre'); 
+		return false;
+	}
+
+	if(form.apellido.value.length == 0) { //comprueba que no esté vacío
+		form.apellido.focus();   
+		alert('No has escrito tu apellido'); 
+		return false;
+	}
+
+	if(form.email.value.length == 0) { //comprueba que no esté vacío
+		form.email.focus();
+		alert('No has escrito tu Email');
+		return false;
+	}else{
+
+		if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+/.test(form.email.value)) ) { //comprueba que sea un email válido
+			form.email.focus();
+			alert('No es un Email válido');
+	 		return false;
+		}
+		
+	}
+        
+        if(form.telefono.value.length == 0) { //comprueba que no esté vacío
+		form.telefono.focus();   
+		alert('No has escrito tu nombre de usuario'); 
+		return false;
+	}
+
+	if(form.usuario.value.length == 0) { //comprueba que no esté vacío
+		form.usuario.focus();   
+		alert('No has escrito tu nombre de usuario'); 
+		return false;
+	}
+
+	if (form.password.value.length < 4) { //comprueba que no sea corta
+
+		if(form.password.value.length == 0) { //comprueba que no esté vacío
+			form.password.focus();
+			alert('No has escrito tu contraseña'); 
+			return false;
+		}else{
+			form.password.focus();
+			alert('La contraseña es demasiado corta');
+			return false;
+		}
+
+	}
+
+	if(form.password.value != form.repeat_password.value) {
+		form.password.focus();            //comprueba que sean iguales
+		alert('Las contraseñas no coinciden');
+		return false;
+	}
+
+	return true;
 
 }
     </script>
@@ -75,7 +88,7 @@
     
         <h1>Ingrese sus datos</h1>
     
-        <form name="formReg" method="POST" action="Registro" class="form-horizontal">
+        <form name="formReg" method="POST" action="Registro" class="form-horizontal" onsubmit="return validate(this);">
             <input type="hidden" name="enviado" value="1" />
             <div class="control-group">
                 <label class="control-label">Nombre</label>

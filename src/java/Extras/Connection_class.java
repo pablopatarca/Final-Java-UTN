@@ -6,11 +6,13 @@ public class Connection_class{
     public static Connection mysql_connect() throws SQLException {
  
       Connection conn = null;
-      String url = "jdbc:mysql://mysql-javautn.jelastic.servint.net/";
+      //String url = "jdbc:mysql://mysql-javautn.jelastic.servint.net/";
+      String url = "jdbc:mysql://localhost/";
       String dbName = "jdelivery";
       String driver = "com.mysql.jdbc.Driver";
       String userName = "root"; 
-      String password = "hv5XS8my4f";
+      //String password = "hv5XS8my4f";
+      String password = "";
       try {
           Class.forName(driver).newInstance();
           conn = DriverManager.getConnection(url+dbName,userName,password);

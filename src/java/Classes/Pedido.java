@@ -14,13 +14,13 @@ import java.util.ArrayList;
 public class Pedido {
    
     private int id;
-    private int cliente_id;
+    private Cliente cliente;
     private ArrayList<Producto> listaProductos;
     double total = 0;
     String fecha;
     
-    public int getClienteId() {
-		return cliente_id;
+    public Cliente getCliente() {
+		return cliente;
     }
     public int getId() {
 		return id;
@@ -34,8 +34,8 @@ public class Pedido {
         return listaProductos;
     }
     
-    public void setClienteId(int cliente_id){
-        this.cliente_id = cliente_id;
+    public void setCliente(Cliente cliente){
+        this.cliente = cliente;
     }
     
     public void setId(int id){

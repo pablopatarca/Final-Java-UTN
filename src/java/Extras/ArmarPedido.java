@@ -52,7 +52,7 @@ public class ArmarPedido extends HttpServlet {
         Pedido pedido = new Pedido();
         pedido.setListaProductos((ArrayList<Producto>)sesion.getAttribute("listaProductos"));
         Cliente cliente = (Cliente)sesion.getAttribute("cliente");
-        pedido.setClienteId(cliente.getId());
+        pedido.setCliente(cliente);
         pedido.setFecha(cal1.get(Calendar.YEAR)+"-"+cal1.get(Calendar.MONTH)+"-"+cal1.get(Calendar.DATE));
         double valorTotal = pedido.calcularTotal();
         System.out.println("Monto total: "+valorTotal);

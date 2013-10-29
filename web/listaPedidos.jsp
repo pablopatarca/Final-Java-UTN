@@ -34,8 +34,7 @@
                     //HttpSession sesion = request.getSession(false);
                     if(sesion.getAttribute("cliente") != null ){
                         Cliente cliente = (Cliente)sesion.getAttribute("cliente");
-                        int cliente_id = cliente.getId();
-                        ArrayList<Pedido> listaPedidos = Pedido_Datos.getPedidos(cliente_id);
+                        ArrayList<Pedido> listaPedidos = Pedido_Datos.getPedidos(cliente);
                         for (Pedido pedido : listaPedidos){
                             out.print("<tr>");
                                 out.print("<td>" + pedido.getFecha() + "</td>");

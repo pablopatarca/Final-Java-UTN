@@ -30,7 +30,7 @@
                         out.println("<h3>" + cliente.getNombre() + " " + cliente.getApellido() + "</h3>");
                         out.println("<h4>" + cliente.getId() + "</h4>");
 
-                        ArrayList<Pedido> listaPedidos = Pedido_Datos.getPedidos(cliente.getId());
+                        ArrayList<Pedido> listaPedidos = Pedido_Datos.getPedidos(cliente);
                         out.println("<table class='table'>");
                         for(Pedido pedido : listaPedidos){
 

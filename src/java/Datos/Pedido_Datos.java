@@ -1,6 +1,7 @@
 package Datos;
 import Classes.Pedido;
 import Classes.Producto;
+import Classes.Cliente;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,11 +21,11 @@ public class Pedido_Datos {
                     e1.printStackTrace();
             } 
             Connection con = Extras.Connection_class.mysql_connect();
-            int cliente_id = pedido.getClienteId();
+            int cliente_id = pedido.getCliente().getId();
             try
             {
                 String query = "INSERT INTO pedidos(cliente_id, total, fecha_pedido) VALUES('"+
-                        pedido.getClienteId() +"', '"+
+                        pedido.getCliente().getId() +"', '"+
                         pedido.getTotal()+"', '"+
                         pedido.getFechaSQL()+"' );";
                 PreparedStatement pstm = con.prepareStatement(query);
@@ -59,7 +60,7 @@ public class Pedido_Datos {
 	}
        
       
-    public static ArrayList<Pedido> getPedidos(int cliente_id) throws SQLException
+    public static ArrayList<Pedido> getPedidos(Cliente cliente) throws SQLException
     {
         Pedido pedido;
         ArrayList<Pedido> listaPedidos = new ArrayList<Pedido>();
@@ -73,9 +74,9 @@ public class Pedido_Datos {
         //Connection con = DriverManager.getConnection(ConexionDB.GetUrlConexion());
         Connection con = (Connection) Extras.Connection_class.mysql_connect();
         java.sql.PreparedStatement pstm;
-        if(cliente_id!=0){
+        if(cliente.getId()!=0){
             pstm = con.prepareStatement("SELECT * FROM pedidos"
-                + " WHERE pedidos.cliente_id = '" + cliente_id + "'");
+                + " WHERE pedidos.cliente_id = '" + cliente.getId() + "'");
         }else{
             pstm = con.prepareStatement("SELECT * FROM pedidos");  
         }
@@ -83,7 +84,7 @@ public class Pedido_Datos {
         while(res.next()){
 
             pedido = new Pedido();
-            pedido.setClienteId(cliente_id);
+            pedido.setCliente(cliente);
             pedido.setId(res.getInt("pedidos.pedido_id"));
             pedido.setTotal(res.getDouble("pedidos.total"));
             pedido.setFecha(res.getString("pedidos.fecha_pedido"));
